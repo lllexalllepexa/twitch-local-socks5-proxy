@@ -1,0 +1,25 @@
+{
+  "manifest_version": 3,
+  "name": "Twitch Local SOCKS5 Proxy",
+  "version": "1.4.0",
+  "description": "Маршрутизация трафика Twitch через локальный SOCKS5 прокси при загрузке стримов",
+  "permissions": [
+    "proxy",
+    "storage",
+    "webNavigation"
+  ],
+  "host_permissions": [
+    "*://*.twitch.tv/*",
+    "*://*.ttvnw.net/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "Twitch Local Proxy"
+  },
+  "icons": {
+    "128": "icon128.png"
+  }
+}

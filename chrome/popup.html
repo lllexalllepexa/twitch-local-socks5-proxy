@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <style>
+    body {
+      width: 220px;
+      padding: 16px;
+      background: #18181b;
+      color: #efeff1;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      margin: 0;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .title {
+      font-size: 13px;
+      font-weight: 600;
+      color: #adadb8;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    button {
+      width: 100%;
+      height: 44px;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: background-color 0.2s, transform 0.1s;
+      outline: none;
+    }
+
+    button:active {
+      transform: scale(0.97);
+    }
+
+    .on {
+      background: #22c55e;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+    }
+
+    .on:hover {
+      background: #16a34a;
+    }
+
+    .off {
+      background: #ef4444;
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
+    }
+
+    .off:hover {
+      background: #dc2626;
+    }
+
+    .info {
+      font-size: 11px;
+      color: #71717a;
+      text-align: center;
+      line-height: 1.3;
+    }
+  </style>
+</head>
+<body>
+  <div class="title">Twitch Local Proxy</div>
+  <button id="toggle">...</button>
+  <div class="info">Прокси активируется на 3 сек. при открытии стрима</div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
