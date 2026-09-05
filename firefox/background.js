@@ -17,7 +17,7 @@ function setBadge(text, color) {
 }
 
 /* ── Firefox specific: browser.proxy.onRequest ─────── */
-// Маршрутизирует конкретные запросы на лету, не затрагивая глобальные настройки Firefox и не конфликтуя с FoxyProxy!
+// Маршрутизирует конкретные запросы на лету, не затрагивая глобальные настройки браузера и другие прокси-расширения!
 
 const hasOnRequestAPI = typeof browser !== "undefined" && browser.proxy && typeof browser.proxy.onRequest !== "undefined";
 

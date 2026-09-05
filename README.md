@@ -33,7 +33,7 @@
 │   └── icon128.png     # Иконка расширения
 │
 ├── firefox/            # Версия для Gecko-браузеров (Firefox, Zen Browser, LibreWolf, Floorp)
-│   ├── background.js   # Фоновый скрипт с browser.proxy.onRequest API (без конфликтов с FoxyProxy!)
+│   ├── background.js   # Фоновый скрипт с browser.proxy.onRequest API (без конфликтов с другими расширениями)
 │   ├── manifest.json   # Firefox MV3 манифест с browser_specific_settings (gecko id)
 │   ├── popup.html      # UI меню расширения
 │   ├── popup.js        # Логика переключения состояния
@@ -81,7 +81,7 @@
 
 ### Mozilla Firefox / Zen Browser / LibreWolf
 
-В Firefox реализована поддержка специального API **`browser.proxy.onRequest`**. Расширение изолированно проксирует только запросы к Twitch и **не конфликтует с FoxyProxy** или другими системными прокси!
+В Firefox реализована поддержка специального API **`browser.proxy.onRequest`**. Расширение изолированно перенаправляет только запросы к Twitch и не меняет общие настройки браузера, благодаря чему оно **не конфликтует с другими прокси-расширениями** и сторонними настройками сети.
 
 #### Вариант A. Временная установка (для быстрой проверки)
 1. В адресной строке Firefox перейдите по адресу:
